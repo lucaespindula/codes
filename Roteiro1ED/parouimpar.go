@@ -2,19 +2,17 @@ package main
 
 import "fmt"
 
-func SomaAte(n int) int {
-	soma := 0
-	for i := 1; i <= n; i++ {
-		soma += i
+func ParOuImpar(n int) string {
+	if n%2 == 0 {
+		return "Par"
 	}
-	return soma
+	return "Ímpar"
 }
 
 func main() {
-	var n int
-	fmt.Print("Insira um número: ")
-	fmt.Scan(&n)
-
-	resultado := SomaAte(n)
-	fmt.Println("A soma de 1 até", n, "é:", resultado)
+	var numero int
+	fmt.Print("Digite um número inteiro: ")
+	fmt.Scan(&numero)
+	resultado := ParOuImpar(numero)
+	fmt.Println("O número é:", resultado)
 }
